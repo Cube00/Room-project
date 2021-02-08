@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+    background-color: #f6f5f5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bounce {
+    position: absolute;
+    top: -25%;
+    right: -12%;
+    width: 830px;
+    height: 830px;
+    background-color: #251351;
+    border-radius: 50%;
+    z-index: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 15px 0;
+    background: none;
 }
 
-.App-link {
-  color: #61dafb;
+.logo h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    color: #251351;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 20px;
+}
+
+nav ul li a {
+    font-size: 16px;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #8a8a8a;
+    /* font-weight: bold; */
+    transition-duration: 0.4s;
+}
+
+nav ul li a:hover {
+    color: rgb(233, 146, 143);
+}
+
+.srch-ic,
+.bskt-ic {
+    display: flex;
+}
+
+.bskt-ic img,
+.srch-ic img {
+    width: 22px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.search-btn,
+.basket-btn {
+    cursor: pointer;
+    filter: invert(60%);
+}
+
+.search-btn:hover,
+.basket-btn:hover {
+    filter: invert(27%) sepia(51%) saturate(2878%) brightness(104%) contrast(97%);
+}
+
+.premium-item {
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.premium-item img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.premium-item h2::first-letter {
+    text-transform: uppercase;
+    font-size: 89px;
+}
+
+.premium-item h2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-30%);
+    transform: translateX(-50%);
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1;
+}
+
+.premium-item span {
+    position: absolute;
+    overflow: hidden;
+    width: 800px;
+    height: 37px;
+    top: 60%;
+    left: 50%;
+    transform: translateY(-60%);
+    transform: translateX(-50%);
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    color: #d1d1d1;
+    z-index: 1;
+}
+
+.wall {
+    width: 1200px;
+    margin: auto;
+}
+
+.main-prdocuts {
+    position: relative;
+    z-index: 1;
+    margin-top: 80px;
+}
+
+.title-section {
+    margin-top: 5px;
+    margin-bottom: 60px;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.title-section h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    color: #040926;
+}
+
+.title-section span {
+    display: flex;
+    justify-content: center;
+}
+
+.title-section span a {
+    margin-left: 4px;
+}
+
+.product-items {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.main-product-item {
+    position: relative;
+    width: 350px;
+    margin-bottom: 15px;
+}
+
+.image-controler {
+    height: 290px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-product-item img {
+    width: 100%;
+    min-height: 290px;
+}
+
+.main-product-item h2::first-letter {
+    text-transform: uppercase;
+}
+
+.main-product-item h2 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    color: #040926;
+}
+
+.main-product-item span {
+    font-size: 18px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    color: #7d2e68;
+}
+
+.main-product-item a {
+    position: absolute;
+    padding: 10px 20px;
+    bottom: 5px;
+    right: 0px;
+    background-color: #fff;
+    font-family: "Source Sans Pro", sans-serif;
 }
